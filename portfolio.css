@@ -1,0 +1,164 @@
+div {
+	display: inline-block;
+}
+
+body {
+	width: 100%;
+	margin: auto;
+	background-color: #BBEEFF;
+}
+
+span{
+	display: inline-block;
+}
+
+#topbar{
+	overflow: hidden;
+	position: fixed;
+	margin: auto;
+	top: 0;
+	width: 100%;
+	background-color: #46E4D9;
+}
+#personal_info{
+	padding: 20px;
+	width: 40%;
+}
+
+#avantar{
+	top: 0;
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	display: inline-block;
+}
+
+#resume_download{
+	top: 0;
+	float: right;
+	padding:10px;
+	width: 20%;
+}
+
+#resume_download button{
+	float: right;
+	border: none;
+ 	color: white;
+  	padding: 15px 32px;
+  	text-align: center;
+  	font-size: 16px;
+  	cursor: pointer;
+  	background-color: #0060E6;
+}
+
+#resume_download button:hover{
+ 	opacity: 0.7;
+}
+
+
+#maincontant {
+	width: 70%;
+	
+}
+
+#intro{
+	width: 40%;
+	margin-left: 20px;
+}
+
+#skill{
+	width: 50%;
+	top: 0;
+	float: right;
+
+}
+
+#skill_img{
+	margin: 10px;
+}
+
+#skill_text{
+	float: right;
+	margin: 10px;
+}
+
+#social_media{
+	float: right;
+	width: 20%;
+}
+
+#social_media button{
+	max-width: 80%;
+	min-width: 150px;
+	width: 200px;
+	border: none;
+  	padding: 15px 32px;
+  	text-align: center;
+  	font-size: 16px;
+  	margin: 4px 2px;
+  	cursor: pointer;
+}
+
+#social_media button:hover{
+ 	opacity: 0.7;
+}
+
+#social_media_link{
+	float: right;
+	margin: 20px;
+	width: 75%;
+}
+
+#linkedin {
+	color: white;
+	background-color: #0077B5;
+}
+
+#github {
+	color: 	#24292e;
+	background-color: #2dba4e;
+}
+
+#instagram {
+	color: 	#white;
+	background-image: url(insicon.png);
+}
+
+#contact{
+	padding: 20px;
+	float: right;
+	width: 50%;
+}
+
+#contact_info{
+	margin-left: 20px;
+	padding: 20px;
+	width: 35%;
+	float: right;
+	position: absolute;
+	bottom: 0;
+}
+
+#contact_me_form{
+	padding: 20px;
+	width: 40%;
+	border-style: solid;
+	border-color: black;
+}
+
+#hobby{
+	width: 40%;
+	margin-left: 20px;
+}
+
+#hobby_img img{
+	max-height: 400px;
+}
+
+#hobby_text{
+	width: 75%;
+}
+
+input{
+	width: 50%;
+}
