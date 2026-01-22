@@ -5,50 +5,115 @@ div {
 body {
 	width: 100%;
 	margin: auto;
-	background-color: #BBEEFF;
+	background-color: #88B7F3;
+}
+
+:root {
+	--topbar-space: 180px;
+	/* default reserved space for fixed topbar */
 }
 
 span {
 	display: inline-block;
 }
 
+p {
+	font-family: Arial, sans-serif;
+	font-size: large;
+}
+
+h1,
+h2,
+h3 {
+	font-family: Arial;
+}
+
 #topbar {
 	overflow: hidden;
 	position: fixed;
-	margin: auto;
 	top: 0;
+	left: 0;
 	width: 100%;
-	background-color: #46E4D9;
+	background-color: #4F94ED;
+	z-index: 1000;
+	min-height: var(--topbar-space);
+}
+
+.topbar-inner {
+	width: 70%;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 8px 16px;
+	box-sizing: border-box;
+	position: relative;
 }
 
 #personal_info {
-	padding: 20px;
-	width: 40%;
+	padding: 12px;
+	width: 30%;
+	box-sizing: border-box;
 }
 
 #avantar {
-	top: 0;
 	margin: 0;
+	display: inline-block;
 	position: absolute;
 	left: 50%;
-	display: inline-block;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1010;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#avantar img {
+	display: block;
+	width: 120px;
+	height: auto;
+	max-height: 140px;
+	border-radius: 6px;
+}
+
+#top-right {
+	padding: 12px;
+	width: 30%;
+	display: flex;
+	box-sizing: border-box;
+	flex-direction: column;
+	align-items: center;
+}
+
+#contact {
+	margin: 10px;
+	padding-left: 40px;
+	padding-right: 20px;
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: right;
 }
 
 #resume_download {
-	top: 50%;
-	float: right;
-	padding: 50px;
+	padding: 10px;
 	width: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #resume_download button {
-	float: right;
 	border: none;
 	color: white;
-	padding: 15px 32px;
+	padding: 15px 50px;
 	text-align: center;
 	font-size: 16px;
 	cursor: pointer;
+	margin: 4px 2px;
 	background-color: #0060E6;
 }
 
@@ -56,22 +121,38 @@ span {
 	opacity: 0.7;
 }
 
-
 #maincontant {
+	margin-top: var(--topbar-space);
 	width: 70%;
-
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
 }
 
 #intro {
-	width: 40%;
-	margin-left: 20px;
+	width: 100%;
+	margin-left: 0;
+}
+
+.content-row {
+	display: flex;
+	gap: 24px;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.three-col {
+	display: flex;
+	gap: 24px;
+	align-items: flex-start;
+	width: 100%;
 }
 
 #skill {
-	width: 50%;
-	top: 0;
-	float: right;
-
+	width: 40%;
+	box-sizing: border-box;
 }
 
 #skill_img {
@@ -79,13 +160,14 @@ span {
 }
 
 #skill_text {
-	float: right;
 	margin: 10px;
 }
 
-#social_media {
-	float: right;
+#social_media.in-main {
+	margin: 0;
 	width: 20%;
+	box-sizing: border-box;
+	align-self: flex-start;
 }
 
 #social_media button {
@@ -105,9 +187,12 @@ span {
 }
 
 #social_media_link {
-	float: right;
-	margin: 20px;
-	width: 75%;
+	margin: 10px 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	align-items: flex-start;
 }
 
 #linkedin {
@@ -125,37 +210,78 @@ span {
 	background-image: url(insicon.png);
 }
 
-#hobby {
-	width: 70%;
-	margin-left: 20px;
+#hobby.in-main {
+	width: 40%;
+	box-sizing: border-box;
 }
 
 #hobby_img {
-	width: 50%;
+	width: 100%;
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
 }
 
 #hobby_img img {
 	max-height: 400px;
+	width: 48%;
+	height: auto;
 }
 
 #hobby_text {
-	width: 50%;
-	float: right;
-}
-
-#contact {
-	float: right;
-	width: 20%;
-}
-
-#contact_me_form {
-	padding: 20px;
-	width: 40%;
-	border-style: solid;
-	border-color: black;
+	width: 100%;
 }
 
 
-input {
-	width: 50%;
+@media (max-width: 800px) {
+
+	:root {
+		--topbar-space: 260px;
+	}
+
+	.three-col,
+	.content-row {
+		flex-direction: column;
+	}
+
+	#skill,
+	#hobby.in-main,
+	#social_media.in-main {
+		width: 100%;
+	}
+
+	#maincontant {
+		width: 94%;
+	}
+
+	#social_media_link {
+		align-items: center;
+	}
+
+	.topbar-inner {
+		flex-direction: column;
+		align-items: center;
+		gap: 8px;
+	}
+
+	#personal_info {
+		padding: 0px;
+		width: 100%;
+		text-align: center;
+	}
+
+	#avantar {
+		display: none;
+	}
+
+	#top-right {
+		padding: 0px;
+		width: 100%;
+	}
+
+	#contact{
+		padding: 0px;
+		width: 100%;
+		text-align: center
+	}
 }
